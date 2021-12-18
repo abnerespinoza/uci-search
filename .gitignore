@@ -129,5 +129,7 @@ dmypy.json
 .pyre/
 
 #
+.DS_Store
+
 cached_sites/
 documents/
