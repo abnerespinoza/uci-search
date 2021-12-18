@@ -93,7 +93,7 @@ def main():
     posting_counter = 0
     inverted_index = dict()
 
-    # extracting json files from folders in CACHED SITES
+    # extracting json files from CACHED_SITES
     folders = listdir_nohidden(CACHED_SITES)
 
     sites = []
@@ -113,6 +113,8 @@ def main():
     # creating lookup for documents, building inverted index
     print('total: ', len(sites))
     for doc_ID, site in enumerate(sites):
+        doc_ID = str(doc_ID)
+        
         # sanity check
         if (doc_ID % 1_000) == 0:
             print('at: ', doc_ID)
